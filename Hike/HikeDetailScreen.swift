@@ -7,12 +7,33 @@
 
 import SwiftUI
 
+
 struct HikeDetailScreen: View {
+    
+    let hike: Hike
+    @State private var zoomed: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack  {
+            Image(hike.photo)
+                .resizable()
+                .aspectRatio(contentMode: zoomed ? .fill: .fit)
+                .onTapGesture {
+                    withAnimation {
+                        zoomed.toggle()
+                    }
+                }
+            Text(hike.name)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            Text("\(hike.miles.formatted()) miles")
+            Spacer()
+        }.navigationTitle(hike.name)
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    HikeDetailScreen()
+    NavigationStack{
+        HikeDetailScreen(hike: Hike(name: "cairn" , photo:  "tom" ,miles: 6))
+    }
 }

@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD5F5A7F2C662A1A0077DFED /* HikeDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5F5A7E2C662A1A0077DFED /* HikeDetailScreen.swift */; };
 		CD95B0D92C5FC918004D3D68 /* HikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95B0D82C5FC918004D3D68 /* HikeApp.swift */; };
 		CD95B0DB2C5FC918004D3D68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95B0DA2C5FC918004D3D68 /* ContentView.swift */; };
 		CD95B0DD2C5FC919004D3D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD95B0DC2C5FC919004D3D68 /* Assets.xcassets */; };
 		CD95B0E12C5FC919004D3D68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD95B0E02C5FC919004D3D68 /* Preview Assets.xcassets */; };
+		CD95B0E92C5FCC04004D3D68 /* Hike.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95B0E82C5FCC04004D3D68 /* Hike.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD5F5A7E2C662A1A0077DFED /* HikeDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeDetailScreen.swift; sourceTree = "<group>"; };
 		CD95B0D52C5FC918004D3D68 /* Hike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD95B0D82C5FC918004D3D68 /* HikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeApp.swift; sourceTree = "<group>"; };
 		CD95B0DA2C5FC918004D3D68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CD95B0DC2C5FC919004D3D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD95B0DE2C5FC919004D3D68 /* Hike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hike.entitlements; sourceTree = "<group>"; };
 		CD95B0E02C5FC919004D3D68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD95B0E82C5FCC04004D3D68 /* Hike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hike.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,10 @@
 		CD95B0D72C5FC918004D3D68 /* Hike */ = {
 			isa = PBXGroup;
 			children = (
+				CD95B0EA2C5FCFB6004D3D68 /* Models */,
 				CD95B0D82C5FC918004D3D68 /* HikeApp.swift */,
 				CD95B0DA2C5FC918004D3D68 /* ContentView.swift */,
+				CD5F5A7E2C662A1A0077DFED /* HikeDetailScreen.swift */,
 				CD95B0DC2C5FC919004D3D68 /* Assets.xcassets */,
 				CD95B0DE2C5FC919004D3D68 /* Hike.entitlements */,
 				CD95B0DF2C5FC919004D3D68 /* Preview Content */,
@@ -67,6 +73,14 @@
 				CD95B0E02C5FC919004D3D68 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD95B0EA2C5FCFB6004D3D68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD95B0E82C5FCC04004D3D68 /* Hike.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD95B0E92C5FCC04004D3D68 /* Hike.swift in Sources */,
+				CD5F5A7F2C662A1A0077DFED /* HikeDetailScreen.swift in Sources */,
 				CD95B0DB2C5FC918004D3D68 /* ContentView.swift in Sources */,
 				CD95B0D92C5FC918004D3D68 /* HikeApp.swift in Sources */,
 			);

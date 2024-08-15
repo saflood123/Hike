@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Identifer {
+struct Hike: Identifiable, Hashable {
     let id = UUID()
     let name: String
     let photo: String
