@@ -8,21 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
-    let hikes = [
-        Hike(name: "cairn" , photo:  "tom" ,miles: 6),
-        Hike(name: "walkers" , photo:  "walk" ,miles: 5)
-    ]
+    
+    @State var hikes = [
+        Hike(name: "Joe's Original", photo: "tom", miles: 1),
+        Hike(name: "The Real Joe's Original", photo: "walk", miles: 2),
+        Hike(name: "Original Joe's", photo: "tom", miles: 3)
+       ]
+//    var hikes = [
+//        Hike(name: "cairn" , photo:  "tom" ,miles: 6),
+//        Hike(name: "walkers" , photo:  "walk" ,miles: 5)
+//    ]
     var body: some View {
         NavigationStack {
+           
             List(hikes) { hike in
                 NavigationLink(value: hike) {
                     HikeCellView(hike: hike)
+                        
                 }
             }.navigationTitle("Hikes")
+                .toolbar {
+                    ToolbarItem ( placement: .topBarTrailing){
+                        Button(action: {
+                            addHike()
+                        }, label: {
+                            Image(systemName: "plus")
+                        })
+                    }
+                }
+                
+                
             .navigationDestination(for: Hike.self) { hike in
                 HikeDetailScreen(hike: hike)
+                  
                 }
         }
+        
+    }
+     func addHike(){
+        hikes.append(Hike(name: "Stu", photo: "tom",  miles: 1))
     }
 }
 
